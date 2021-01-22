@@ -16,4 +16,5 @@ jobs:
         with:
           python-version: 3.8
       - name: 指定フォルダへ移動
+        run: |
           cd week01
