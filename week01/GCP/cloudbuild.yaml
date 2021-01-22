@@ -1,7 +1,5 @@
-defaults:
-      run:
-        working-directory: ./week01/
 steps:
 - name: "gcr.io/cloud-builders/gcloud"
   args: ["app", "deploy"]
-timeout: "1600s"
+  timeout: "1600s"
+  dir: 'IDS721/week01/GCP'
