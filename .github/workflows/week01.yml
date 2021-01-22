@@ -30,4 +30,3 @@ jobs:
       - name: Python blackによる整形
         run: |
           make format
-        with:
