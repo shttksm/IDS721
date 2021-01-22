@@ -18,3 +18,16 @@ jobs:
       - name: 指定フォルダへ移動
         run: |
           cd week01
+      - name: 依存パッケージのインストール
+        run: |
+          make install
+      - name: Pylintによる静的解析
+        run: |
+          make lint
+      - name: Pytestによる単体テスト
+        run: |
+          make test
+      - name: Python blackによる整形
+        run: |
+          make format
+        with:
