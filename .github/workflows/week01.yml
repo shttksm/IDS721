@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # 各コマンドの実行は，predifinedのものならusesで指定コマンドならrunで行う．
-      - uses: actions/checkout@2
+      - uses: actions/checkout@v2
       - name: Set up Python 3.8
         uses: actions/setup-python@v1
         with:
