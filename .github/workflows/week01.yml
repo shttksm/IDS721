@@ -8,16 +8,17 @@ jobs:
   build:
     # 実行仮想環境の指定
     runs-on: ubuntu-latest
+    # ワーキングディレクトリの設定
+    defaults:
+      run:
+        working-directory: ./week01/AWS
     steps:
       # 各コマンドの実行は，predifinedのものならusesで指定コマンドならrunで行う．
       - uses: actions/checkout@v2
-      - name: Set up Python 3.8
+      - name: Python3.8のセットアップ
         uses: actions/setup-python@v1
         with:
           python-version: 3.8
-      - name: 指定フォルダへ移動
-        run: |
-          cd week01/AWS
       - name: 依存パッケージのインストール
         run: |
           make install
