@@ -1,0 +1,19 @@
+# 本ワークフローの名前
+name: Python application test with Github Actions
+# これはこのJobがトリガーされるタイミング
+on: [push] 
+
+jobs:
+  # Jobの名前
+  build:
+    # 実行仮想環境の指定
+    runs-on: ubuntu-latest
+    steps:
+      # 各コマンドの実行は，predifinedのものならusesで指定コマンドならrunで行う．
+      - uses: actions/checkout@2
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.8
+      - name: 指定フォルダへ移動
+          cd week01
