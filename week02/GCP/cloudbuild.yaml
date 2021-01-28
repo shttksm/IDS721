@@ -1,0 +1,4 @@
+steps:
+- name: "gcr.io/cloud-builders/gcloud"
+  args: ["app", "deploy", "week02/GCP/app.yaml"]
+  timeout: "1600s"
